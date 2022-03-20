@@ -1,0 +1,31 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    margin: auto;
+    max-width: 1000px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 100px;
+    background-color: hsl(0, 8%, 32%);
+    color: #eee;
+    font-size: 15px;
+}
+
+
+.text {
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: hsl(120, 51%, 25%);
+    max-width: 400px;
+}
+
+.text__calculatedAmount {
+    font-weight: 700;
+    font-size: 20px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mój osobisty kantor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1 class="header__mainHeader">Przelicznik walut</h1>
+    </header>
+    <form class="js-form form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Kantor</legend>
+            <p>
+                <label>
+                    <span class="form__labelText">Wybierz walutę:</span>
+                    <select class="js-formSelect form__select" name="Currencies">
+                        <option value="Euro">Euro</option>
+                        <option value="Dollar">Dolar amerykański</option>
+                        <option value="Pound">Funt brytyjski</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="form__labelText">Aktualny kurs w PLN:</span> <input class="js-formExchange form__field" type="number" name="exchangeRate" readonly>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="form__labelText">Wpisz kwotę w wybranej walucie*:</span> <input class="js-formAmount form__field" type="number" name="amount" step="0.01" min="0.01" required autofocus>
+                </label>
+            </p>
+            <p>
+                <button class="form__button">Przelicz</button>
+            </p>
+        </fieldset>
+    </form>
+    <p class="text">
+        Kwota po przeliczeniu w PLN: <strong class="js-calculatedAmount text__calculatedAmount"></strong>
+    </p>
+
+
+</body>
+
+</html>
