@@ -1,44 +1,51 @@
-let currencyElement = document.querySelector(".js-formSelect");
-let exchangeRateElement = document.querySelector(".js-formExchange");
-let enterAmountElement = document.querySelector(".js-formAmount");
-let calculatedAmountElement = document.querySelector(".js-calculatedAmount");
-let formElement = document.querySelector(".js-form");
+{
+    const chooseCurrency = () => {
 
-let euro = 4.58;
-let dollar = 3.99;
-let pound = 5.48;
+        const currencyElement = document.querySelector(".js-formSelect");
+        const exchangeRateElement = document.querySelector(".js-formExchange");
 
-currencyElement.value = "Euro";
-exchangeRateElement.value = euro;
+        const euro = 4.58;
+        const dollar = 3.99;
+        const pound = 5.48;
 
-currencyElement.addEventListener("change", () => {
-    
-switch(currencyElement.value) {
-    case "Euro":
         exchangeRateElement.value = euro;
-        break;
-        
-    case "Dollar":
-        exchangeRateElement.value = dollar;
-        break;
-        
-    default:
-        exchangeRateElement.value = pound;    
+
+        switch (currencyElement.value) {
+            case "Euro":
+                return euro;
+
+            case "Dollar":
+                return exchangeRateElement.value = dollar;
+
+            case "Pound":
+                return exchangeRateElement.value = pound;
+        };
+    };
+
+    const calculateAmount = (event) => {
+        event.preventDefault();
+
+        const exchangeRateElement = document.querySelector(".js-formExchange");
+        const enterAmountElement = document.querySelector(".js-formAmount");
+        const calculatedAmountElement = document.querySelector(".js-calculatedAmount");
+
+        const exchangeRate = exchangeRateElement.value
+        const enterAmount = enterAmountElement.value
+
+        calculatedAmount = enterAmount * exchangeRate;
+
+        calculatedAmountElement.innerText = calculatedAmount.toFixed(2);
+    };
+
+    const init = () => {
+
+        const currencyElement = document.querySelector(".js-formSelect");
+        const formElement = document.querySelector(".js-form");
+
+        currencyElement.addEventListener("change", chooseCurrency);
+        formElement.addEventListener("submit", calculateAmount);
+
+    };
+
+    init();
 };
-});
-
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    let exchangeRate = exchangeRateElement.value
-    let enterAmount = enterAmountElement.value
-
-    calculatedAmount = enterAmount * exchangeRate;
-
-    calculatedAmountElement.innerText = calculatedAmount.toFixed(2);
-});
-
-
-
-
-
