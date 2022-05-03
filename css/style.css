@@ -27,7 +27,7 @@ html {
     max-width: 400px;
 }
 
-.text__calculatedAmount {
+.text__result {
     font-weight: 700;
     font-size: 20px;
 }

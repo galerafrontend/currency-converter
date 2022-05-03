@@ -8,11 +8,9 @@
         const dollar = 3.99;
         const pound = 5.48;
 
-        exchangeRateElement.value = euro;
-
         switch (currencyElement.value) {
             case "Euro":
-                return euro;
+                return exchangeRateElement.value = euro;
 
             case "Dollar":
                 return exchangeRateElement.value = dollar;
@@ -26,15 +24,15 @@
         event.preventDefault();
 
         const exchangeRateElement = document.querySelector(".js-formExchange");
-        const enterAmountElement = document.querySelector(".js-formAmount");
-        const calculatedAmountElement = document.querySelector(".js-calculatedAmount");
+        const inputValueElement = document.querySelector(".js-formAmount");
+        const resultElement = document.querySelector(".js-result");
 
         const exchangeRate = exchangeRateElement.value
-        const enterAmount = enterAmountElement.value
+        const inputValue = inputValueElement.value
 
-        calculatedAmount = enterAmount * exchangeRate;
+        const result = inputValue * exchangeRate;
 
-        calculatedAmountElement.innerText = calculatedAmount.toFixed(2);
+        resultElement.innerText = result.toFixed(2);
     };
 
     const init = () => {
