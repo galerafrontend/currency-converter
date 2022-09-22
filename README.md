@@ -7,7 +7,7 @@
 - [Technologies/Conventions I used](#TechnologiesConventions-I-used)
 
 ## Demo
-https://eltair41.github.io/currency-converter/
+https://galerafrontend.github.io/currency-converter/
 
 ## General info
 This project is a simple example of currency converter. The converter is easy and plessent to use as well as you need only 3 steps to convert selected currency.
