@@ -32,7 +32,7 @@
 
         const result = inputValue * exchangeRate;
 
-        resultElement.innerText = result.toFixed(2);
+        resultElement.innerText = `${result.toFixed(2)} PLN`;
     };
 
     const init = () => {
