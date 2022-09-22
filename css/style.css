@@ -6,28 +6,22 @@ html {
     box-sizing: inherit;
 }
 
-.body {
-    margin: auto;
-    max-width: 1000px;
+body {
     font-family: 'Montserrat', sans-serif;
-    padding: 100px;
-    background-image: url("../images/background.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../images/backgroundImage.png");
     background-size: cover;   
     background-position: center;
-    color: #eee;
-    font-size: 15px;
 }
 
-
-.text {
-    border: 3px solid black;
-    padding: 10px;
-    border-radius: 15px;
-    background-color: hsl(120, 51%, 25%);
-    max-width: 400px;
-}
-
-.text__result {
-    font-weight: 700;
-    font-size: 20px;
+.container {
+    flex-basis: 700px;
+    margin: 20px;
+    padding: 20px 40px 20px 40px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 2px 2px hsl(0, 0%, 65%);;
 }
