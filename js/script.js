@@ -7,6 +7,7 @@
         const euro = 4.58;
         const dollar = 3.99;
         const pound = 5.48;
+        const empty = 0.00;
 
         switch (currencyElement.value) {
             case "Euro":
@@ -17,6 +18,9 @@
 
             case "Pound":
                 return exchangeRateElement.value = pound;
+
+            case "Empty":
+                return exchangeRateElement.value = empty;
         };
     };
 
