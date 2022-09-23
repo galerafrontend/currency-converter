@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -20,34 +20,34 @@
 <body>
     <div class="container">
         <form class="js-form">
-            <h1 class="form__header">Przelicznik walut</h1>
+            <h1 class="form__header">Currency converter</h1>
             
             <label>
                 <span class="form__labelText">
-                    Wybierz walutę:
+                    Select currency:
                 </span>
                 <select class="js-formSelect form__field" name="Currencies">
-                    <option></option>
+                    <option value="Empty"></option>
                     <option value="Euro">Euro - EUR</option>
-                    <option value="Dollar">Dolar amerykański - USD</option>
-                    <option value="Pound">Funt brytyjski - GBP</option>
+                    <option value="Dollar">United States dollar - USD</option>
+                    <option value="Pound">Great Britain pound - GBP</option>
                 </select>
             </label>
             <label>
                 <span class="form__labelText">
-                        Aktualny kurs w PLN:
+                    Current rate in PLN:
                 </span> 
-                <input class="js-formExchange form__field" type="number" name="exchangeRate" readonly>
+                <input class="js-formExchange form__field" value= "0" type="number" name="exchangeRate" readonly>
             </label>
             <label> 
                 <span class="form__labelText">
-                    Wpisz kwotę w wybranej walucie*:
+                    Enter amount*:
                 </span>
                 <input class="js-formAmount form__field" type="number" name="amount" step="0.01" min="0.01" required autofocus>
             </label>
-            <button class="form__button">Przelicz</button>
+            <button class="form__button">Convert</button>
             <p>
-                <span class="form__text">Kwota po przeliczeniu:</span>
+                <span class="form__text">Result:</span>
                 <span class="js-result form__resultText" ></span>
             </p>
     </form>
