@@ -29,3 +29,4 @@ Remember that the field must be filled in otherwise the form will remind about i
 Project is created with:
 - BEM
 - media queries
+- typescript
